@@ -54,7 +54,7 @@ User.prototype.generateHash = function(password) {
 
 // // checking if password is valid
 User.prototype.validPassword = function(password) {
-  return bcrypt.compareSync(password, this.local.password);
+  return bcrypt.compareSync(password, this.password);
 };
 
 User.prototype.comparePassword = function (passw, cb) {

@@ -35,6 +35,7 @@ router.get('/', (req,res) =>
 
       if(err){
         console.log(err);
+        return res.json(err);
       }
 
       if (user) {
@@ -43,6 +44,7 @@ router.get('/', (req,res) =>
         });
       } else {
         var newUser = new User();
+        console.log('id');
         const id = req.body.id;
         const firstName = req.body.firstName;
         const lastName = req.body.lastName;
